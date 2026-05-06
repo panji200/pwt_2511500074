@@ -13,13 +13,13 @@ $id = $_GET['id'];
 $edit = mysqli_fetch_array(mysqli_query($koneksi,"SELECT * FROM skripsi_nimanda WHERE id_skripsi074='$id'"));
 
 if(isset($_POST['tambah'])){
-    $id_skripsi078 = $_POST['id_skripsi074'];
-    $judul_skripsi078 = $_POST['judul_skripsi074'];
-    $topik078 = $_POST['topik074'];
-    $semester078 = $_POST['semester074'];
-    $thn_ajaran078 = $_POST['thn_ajaran074'];
+    $id_skripsi074 = $_POST['id_skripsi074'];
+    $judul_skripsi074 = $_POST['judul_skripsi074'];
+    $topik074 = $_POST['topik074'];
+    $semester074 = $_POST['semester074'];
+    $thn_ajaran074 = $_POST['thn_ajaran074'];
 
-    $insert = mysqli_query($koneksi,"UPDATE skripsi_nimanda SET judul_skripsi078='$judul_skripsi078', topik074='$topik074', semester074='$semester074', thn_ajaran074='$thn_ajaran074' WHERE id_skripsi074='$id_skripsi074'");
+    $insert = mysqli_query($koneksi,"UPDATE skripsi_nimanda SET judul_skripsi074='$judul_skripsi074', topik074='$topik074', semester074='$semester074', thn_ajaran074='$thn_ajaran074' WHERE id_skripsi074='$id_skripsi074'");
 
     if ($insert){
         echo '<div class="alert alert-info-dismissible">
@@ -45,28 +45,28 @@ if(isset($_POST['tambah'])){
         <div class="card-body p-2">
           <form method="POST" action="">
                         <div class="form-group">
-              <label for="id_skripsi078">id Skripsi</label>
-              <input type="text" name="id_skripsi078" value="<?= $edit['id_skripsi078']; ?>" class="form-control" readonly>
+              <label for="id_skripsi074">id Skripsi</label>
+              <input type="text" name="id_skripsi074" value="<?= $edit['id_skripsi074']; ?>" class="form-control" readonly>
             </div>
             <div class="form-group">
-              <label for="judul_skripsi078">Judul Skripsi</label>
-              <input type="text" name="judul_skripsi078" value="<?= $edit['judul_skripsi078']; ?>" id="judul_skripsi078" placeholder="Judul Skripsi" class="form-control">
+              <label for="judul_skripsi074">Judul Skripsi</label>
+              <input type="text" name="judul_skripsi074" value="<?= $edit['judul_skripsi074']; ?>" id="judul_skripsi074" placeholder="Judul Skripsi" class="form-control">
             </div>
             <div class="form-group">
-              <label for="topik078">Topik</label>
-              <input type="text" name="topik078" value="<?= $edit['topik078']; ?>" id="topik078" placeholder="Topik" class="form-control">
+              <label for="topik074">Topik</label>
+              <input type="text" name="topik074" value="<?= $edit['topik074']; ?>" id="topik074" placeholder="Topik" class="form-control">
             </div>
          <div class="form-group">
-             <label for="semester078">Semester</label>
-              <select name="semester078" id="semester078" class="form-control">
+             <label for="semester074">Semester</label>
+              <select name="semester074" id="semester074" class="form-control">
                 <option value="">Pilih Semester</option>
                 <option value="genap">genap</option>
                 <option value="ganjil">ganjil</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="thn_ajaran078">Tahun Ajaran</label>
-             <select name="thn_ajaran078" id="thn_ajaran078" class="form-control">
+              <label for="thn_ajaran074">Tahun Ajaran</label>
+             <select name="thn_ajaran074" id="thn_ajaran074" class="form-control">
                 <option value="">Pilih Tahun Ajaran</option>
                 <option value="2020/2021">2020/2021</option>
                 <option value="2021/2022">2021/2022</option>
