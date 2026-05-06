@@ -12,7 +12,7 @@
 if (isset($_GET['action'])) {
     if ($_GET['action'] == "hapus") {
         $id = $_GET['id'];
-        $query = mysqli_query($koneksi, "DELETE FROM skripsi_nimanda WHERE id_skripsi078='$id'");
+        $query = mysqli_query($koneksi, "DELETE FROM skripsi_nimanda WHERE id_skripsi074='$id'");
         if ($query){
         echo '
         <div class="alert alert-warning alert-dismissible">
@@ -32,17 +32,17 @@ if (isset($_GET['action'])) {
         <tread>
           <tr>
             <th>NO</th>
-            <th>Id Skripsi078</th>
-            <th>Judul Skripsi078</th>
-            <th>Topik078</th>
-            <th>Semester078</th>
-            <th>Thn Ajaran078</th>
+            <th>Id Skripsi074</th>
+            <th>Judul Skripsi074</th>
+            <th>Topik074</th>
+            <th>Semester074</th>
+            <th>Thn Ajaran074</th>
             <th>Aksi</th>
           </tr>
         </tread>
         <?php
         $no = 0;
-        $query = mysqli_query($koneksi,"SELECT * FROM skripsi_nimanda");
+        $query = mysqli_query($koneksi,"SELECT * FROM skripsi_251150074") or die (mysqli_error($koneksi));
         while ($result = mysqli_fetch_array($query) ) {
           $no++;
         ?>

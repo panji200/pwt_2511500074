@@ -9,7 +9,7 @@
 </div>
 <?php
 //kode otomatis
-$carikode = mysqli_query($koneksi,"select max(id_skripsi074) from skripsi_nimanda") or die (mysqli_error($koneksi));
+$carikode = mysqli_query($koneksi,"select max(id_skripsi074) from skripsi_251150074") or die (mysqli_error($koneksi));
 $datakode = mysqli_fetch_array($carikode);
 if ($datakode && $datakode[0] != null) {
     $nilaikode = substr($datakode[0], 2);
@@ -28,7 +28,7 @@ if(isset($_POST['tambah'])){
     $thn_ajaran074 = $_POST['thn_ajaran074'];
 
 
-    $insert = mysqli_query($koneksi,"INSERT INTO skripsi_nimanda values ('$id_skripsi074','$judul_skripsi074','$topik074','$semester074','$thn_ajaran074')");
+    $insert = mysqli_query($koneksi,"INSERT INTO skripsi_251150074 values ('$id_skripsi074','$judul_skripsi074','$topik074','$semester074','$thn_ajaran074')");
     if ($insert){
         echo '<div class="alert alert-info-dismissible">
         <button type="button" class="close" data-dismiss="alert"
