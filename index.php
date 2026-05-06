@@ -115,19 +115,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="index.php?page=mapel" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Mata Pelajaran</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="index.php?page=guru" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Guru</p>
                 </a>
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+                <a href="index.php?page=siswa" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Siswa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?page=ekstra" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ekstrakurikuler</p>
+                </a>
+              </li>
            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -191,7 +203,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h5 class="card-title">Dashboard</h5>
 
                 <p class="card-text">
-                  Selamat Datang di Sistem jadwal Guru pada SMA/SMK
+                  <?php
+                  if (isset($_GET['page'])) {
+                      $page = $_GET['page'];
+                  } else {
+                      $page = "";
+                  }
+                  if ($page == ""){
+                      include "page/dashboard.php";
+                  } elseif (!file_exists("page/".$page.".php")) {
+                      echo "File Tidak Ditemukan";
+                  } else {
+                      include "page/".$page.".php";
+                  }
+                  ?>
                 </p>
 
                 <a href="#" class="card-link">Card link</a>
